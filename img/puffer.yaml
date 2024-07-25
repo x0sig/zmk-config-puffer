@@ -1,55 +1,46 @@
 layers:
-  Dvorak:
-  - ['''', ',', ., P, Y, F, G, C, R, L]
-  - - {t: A, h: LGUI}
-    - {t: O, h: LALT}
-    - {t: E, h: LCTRL}
-    - {t: U, h: LSHFT}
-    - I
-    - D
-    - {t: H, h: RSHFT}
-    - {t: T, h: RCTRL}
-    - {t: N, h: RALT}
-    - {t: S, h: RGUI}
-  - - {t: ':', s: ;}
-    - Q
-    - J
-    - K
+  Qwerty:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: LALT}
+    - {t: S, h: LGUI}
+    - {t: D, h: LCTRL}
+    - {t: F, h: LSHFT}
+    - G
+    - H
+    - {t: J, h: RSHFT}
+    - {t: K, h: RCTRL}
+    - {t: L, h: RGUI}
+    - {t: semi colon, h: RALT}
+  - - Z
     - X
-    - B
-    - M
-    - W
+    - C
     - V
-    - Z
-  - - ESC
-    - {t: BSPC, s: DEL}
-    - {t: TAB, h: Numpad, s: '~'}
-    - {t: ENTER, h: Function}
-    - {t: SPACE, s: '&dot_space'}
+    - B
+    - N
+    - M
+    - {t: ',', s: '"'}
+    - {t: ., s: ''''}
+    - {t: /, s: '?'}
+  - - {t: ESC, s: '`'}
+    - '&smart_tab'
+    - {t: SPACE, h: Numpad}
+    - {t: bs del, h: Nav}
+    - ENTER
     - {t: LSHFT, h: sticky, s: '&caps_word'}
   Numpad:
-  - ['`', <, '>', '', '', '[', '7', '8', '9', ']']
-  - - {t: LGUI, h: sticky}
-    - {t: LALT, h: sticky}
-    - {t: LCTRL, h: sticky}
-    - {t: LSHFT, h: sticky}
-    - ''
-    - {t: +, s: '='}
-    - '4'
-    - '5'
-    - '6'
-    - /
-  - ['', '', '', '', '', '-', '1', '2', '3', \]
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - ['`', '~', '@', ^, +, '*', '7', '8', '9', '-']
+  - [$, '&', '=', '*', '|', +, '4', '5', '6', /]
+  - ['%', '!', <, '>', '#', '=', '1', '2', '3', \]
+  - - (
+    - )
     - {type: held}
     - {t: ▽, type: trans}
     - '0'
-    - KP DOT
-  Function:
-  - [PG UP, HOME, UP, END, '', '', F7, F8, F9, F12]
-  - [PG DN, LEFT, DOWN, RIGHT, '', '', F4, F5, F6, F11]
-  - ['', '', '', '', '', '', F1, F2, F3, F10]
+    - {t: ▽, type: trans}
+  Nav:
+  - ['', '', '', '', '', PG UP, HOME, END, '', '']
+  - ['', '', '', '', '', PG DN, LEFT, UP, DOWN, RIGHT]
+  - ['', '', '', '', '', '', '', '', '', '']
   - - ''
     - ''
     - {t: ▽, type: trans}
@@ -57,9 +48,18 @@ layers:
     - ''
     - ''
   System:
-  - [BOOT, PREV, NEXT, PP, '', '', '', '', '', '']
-  - [BRI INC, MUTE, VOL DN, VOL UP, '', '', '', '', '', '']
-  - [BRI DEC, BT CLR, BT PRV, BT NXT, '', '', '', '', '', '']
+  - [BOOT, MUTE, VOL DN, VOL UP, OUT TOG, BRI INC, F7, F8, F9, F12]
+  - - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
+    - BRI DEC
+    - F4
+    - F5
+    - F6
+    - F11
+  - [BT CLR, PP, PREV, NEXT, '', '', F1, F2, F3, F10]
   - - ''
     - ''
     - {type: held}
@@ -69,43 +69,43 @@ layers:
 combos:
 - p: [6, 7]
   k: '{'
-  l: [Dvorak, Numpad]
+  l: [Qwerty, Numpad]
 - p: [7, 8]
   k: '}'
-  l: [Dvorak, Numpad]
-- p: [5, 6]
-  k: '['
-  l: [Dvorak]
-- p: [8, 9]
-  k: ']'
-  l: [Dvorak]
+  l: [Qwerty, Numpad]
 - p: [16, 17]
   k: (
-  l: [Dvorak, Numpad]
+  l: [Qwerty, Numpad]
 - p: [17, 18]
   k: )
-  l: [Dvorak, Numpad]
+  l: [Qwerty, Numpad]
+- p: [26, 27]
+  k: '['
+  l: [Qwerty, Numpad]
+- p: [27, 28]
+  k: ']'
+  l: [Qwerty, Numpad]
 - p: [1, 2]
   k: <
-  l: [Dvorak]
+  l: [Qwerty]
 - p: [2, 3]
   k: '>'
-  l: [Dvorak]
-- p: [26, 27]
+  l: [Qwerty]
+- p: [11, 12]
   k: _
-  l: [Dvorak, Numpad]
-- p: [27, 28]
+  l: [Qwerty]
+- p: [12, 13]
   k: '='
-  l: [Dvorak, Numpad]
+  l: [Qwerty]
+- p: [21, 22]
+  k: '-'
+  l: [Qwerty]
+- p: [22, 23]
+  k: +
+  l: [Qwerty]
 - p: [11, 12]
-  k: LC(LEFT)
-  l: [Numpad, Function]
+  k: Ctl+ LEFT
+  l: [Numpad, Nav]
 - p: [12, 13]
-  k: LC(RIGHT)
-  l: [Numpad, Function]
-- p: [11, 12]
-  k: ←
-  l: [Dvorak]
-- p: [12, 13]
-  k: →
-  l: [Dvorak]
+  k: Ctl+ RIGHT
+  l: [Numpad, Nav]
