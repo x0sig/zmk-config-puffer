@@ -1,16 +1,13 @@
-Temper Settings
-===============
+# Puffer Settings
 
-Controlling my [temper](https://github.com/raeedcho/temper), a split wireless-only
-mechanical keyboard with [nice!view](https://nicekeyboards.com/docs/nice-view/) displays.
+Controlling my [puffer](https://github.com/DuBento/puffer), a split wireless-only.
 
- * Dvorak base layout
- * [timer-less home row mods](https://github.com/urob/zmk-config#timeless-homerow-mods)
- * sticky shift on right thumb, double-tap (or shift+tap) activates caps-word
- * shift+space morphs into dot+space+sticky-shift
+- QWERTY base layout
+- [timer-less home row mods](https://github.com/urob/zmk-config#timeless-homerow-mods)
+- sticky shift on right thumb, double-tap (or shift+tap) activates caps-word
+- shift+space morphs into dot+space+sticky-shift
 
-![keymap image](img/temper.svg)
-
+![keymap image](img/puffer.svg)
 
 ## Building
 
@@ -20,7 +17,7 @@ Given a directory structure like:
 
 ```
 ...
-|-- config-temper/
+|-- config-puffer/
 |-- zephyr-sdk-0.16.5-1/
 `-- zmk/
     |-- app
@@ -31,7 +28,7 @@ Then from the `zmk/app` directory run the following command to build the
 firmware for the left hand board:
 
 ```sh
-west build -b nice_nano_v2 -p -c -- -DSHIELD="temper_left nice_view_adapter nice_view_temper" -DZMK_CONFIG=../../config-temper-zmk/config -DZMK_EXTRA_MODULES=../../config-temper-zmk -DZephyr-sdk_DIR=../../zephyr-sdk-0.16.5-1/cmake
+west build -b nice_nano_v2 -p -c -- -DSHIELD="puffer_left nice_view_adapter nice_view_puffer" -DZMK_CONFIG=../../config-puffer-zmk/config -DZMK_EXTRA_MODULES=../../config-puffer-zmk -DZephyr-sdk_DIR=../../zephyr-sdk-0.16.5-1/cmake
 ```
 
 This will produce the file `zmk/app/build/zephyr/zmk.utf`. Put the board into
@@ -45,10 +42,9 @@ The keymap image is created using [keymap-drawer](https://github.com/caksoylar/k
 It can be regenerated with the commands:
 
 ```sh
-keymap -c img/keymap_drawer.config.yaml parse -c 10 -z config/temper.keymap > img/temper.yaml
-keymap -c img/keymap_drawer.config.yaml draw -k chocofi img/temper.yaml > img/temper.svg
+keymap -c img/keymap_drawer.config.yaml parse -c 10 -z config/puffer.keymap > img/puffer.yaml
+keymap -c img/keymap_drawer.config.yaml draw -k chocofi img/puffer.yaml > img/puffer.svg
 ```
-
 
 ## Miscellaneous
 
@@ -62,6 +58,5 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 ## Resources
 
- * https://github.com/urob/zmk-config
- * https://github.com/caksoylar/keymap-drawer
-
+- https://github.com/urob/zmk-config
+- https://github.com/caksoylar/keymap-drawer

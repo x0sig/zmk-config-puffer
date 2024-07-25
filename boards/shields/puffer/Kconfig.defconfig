@@ -1,14 +1,14 @@
-if SHIELD_TEMPER_LEFT
+if SHIELD_PUFFER_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Temper"
+    default "Puffer"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_TEMPER_LEFT || SHIELD_TEMPER_RIGHT
+if SHIELD_PUFFER_LEFT || SHIELD_PUFFER_RIGHT
 
 config ZMK_SPLIT
     default y
