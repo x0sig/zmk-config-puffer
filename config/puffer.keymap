@@ -110,6 +110,9 @@ ZMK_MOD_MORPH(bs_del,
 // tap: backspace | shift + tap: delete | hold: nav layer
 SIMPLE_MORPH(bs_del_nav, SFT, &lt NAV BSPC, &kp DEL)
 
+// tap: space | shift + tap: tab | hold: Num layer
+SIMPLE_MORPH(spc_tab_num, SFT, lt NUM SPACE, &kp TAB)
+
 // tap: semicolon | shift + tap: colon
 SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
 
@@ -144,7 +147,7 @@ ZMK_LAYER(Qwerty,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_dquot   &dot_squot   &slash_qmark
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                   &gresc       &tab_tilde  &lt NUM SPACE      &bs_del_nav     &kp ENTER   &shift_word
+                                   &gresc       &tab_tilde   &spc_tab_num      &bs_del_nav     &kp ENTER   &shift_word
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -164,7 +167,7 @@ ZMK_LAYER(Nav,
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
        XXX          XXX             XXX            XXX          XXX            &kp C_VOL_UP    &kp HOME       &kp UP       &kp END      &kp PG_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       XXX          XXX             XXX            XXX          XXX            &kp C_VOL_DN    &kp LEFT       &kp DOWN     &kp RIGHT    &kp PG_DN
+      &kp LALT      &kp LGUI      &kp LCTRL     &kp LSHFT       XXX            &kp C_VOL_DN    &kp LEFT       &kp DOWN     &kp RIGHT    &kp PG_DN
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
        XXX          XXX             XXX            XXX          XXX            &kp K_MUTE      &kp C_PP      &kp C_PREV    &kp C_NEXT      XXX          
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
