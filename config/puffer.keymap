@@ -111,7 +111,7 @@ ZMK_MOD_MORPH(bs_del,
 SIMPLE_MORPH(bs_del_nav, SFT, &lt NAV BSPC, &kp DEL)
 
 // tap: space | shift + tap: tab | hold: Num layer
-SIMPLE_MORPH(spc_tab_num, SFT, lt NUM SPACE, &kp TAB)
+SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
 
 // tap: semicolon | shift + tap: colon
 SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
@@ -136,7 +136,7 @@ ZMK_TAP_DANCE(boot,
     bindings = <&none>, <&bootloader>;
 )
 
-ZMK_CONDITIONAL_LAYER(NUM NAV, SYS)
+ZMK_CONDITIONAL_LAYER(sys_condition, NUM NAV, SYS)
 
 
 ZMK_LAYER(Qwerty,
