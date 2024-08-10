@@ -23,7 +23,7 @@ layers:
     - {t: /, s: '?'}
   - - {t: ESC, s: '`'}
     - {t: TAB, s: '~'}
-    - {t: SPACE, h: Numpad}
+    - {t: SPACE, h: Numpad, s: TAB}
     - {t: BSPC, h: Nav, s: DEL}
     - ENTER
     - {t: LSHFT, h: sticky, s: '&caps_word'}
@@ -39,7 +39,7 @@ layers:
     - {t: ▽, type: trans}
   Nav:
   - ['', '', '', '', '', VOL UP, HOME, UP, END, PG UP]
-  - ['', '', '', '', '', VOL DN, LEFT, DOWN, RIGHT, PG DN]
+  - [LALT, LGUI, LCTRL, LSHFT, '', VOL DN, LEFT, DOWN, RIGHT, PG DN]
   - ['', '', '', '', '', MUTE, PP, PREV, NEXT, '']
   - - ''
     - ''
