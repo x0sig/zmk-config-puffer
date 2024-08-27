@@ -76,43 +76,50 @@ ZMK_COMBO(paste, &kp LS(LC(V)), LM1 LT1, DEF NUM, COMBO_TERM_SLOW)
 
 // ----------- KEYMAP -----------
 
-// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
-ZMK_MOD_MORPH(bs_del,
-    bindings = <&kp BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    /* keep-mods = <MOD_RSFT>; */
-)
-
 // reuse basic mod-morph scheme
-#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+#define MAKE_SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
         mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
         bindings = <BINDING1>, <BINDING2>; \
     )
 
-// tap: backspace | shift + tap: delete | hold: nav layer
-SIMPLE_MORPH(bs_del_nav, SFT, &lt NAV BSPC, &kp DEL)
+// tap: backspace | ctrl + tap: delete | hold: nav layer
+MAKE_SIMPLE_MORPH(bs_del_nav, CTL, &lt NAV BSPC, &kp DEL)
 
 // tap: space | shift + tap: tab | hold: Num layer
-SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
+MAKE_SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
 
 // tap: semicolon | shift + tap: colon
-SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
+MAKE_SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
 
 // tap: slash | shift + tap: question mark
-SIMPLE_MORPH(slash_qmark, SFT, &kp SLASH, &kp QMARK)
+MAKE_SIMPLE_MORPH(slash_qmark, SFT, &kp SLASH, &kp QMARK)
 
 // tap: comma | shift + tap: double quotes
-SIMPLE_MORPH(comma_dquot, SFT, &kp COMMA, &kp DOUBLE_QUOTES)
+MAKE_SIMPLE_MORPH(comma_dquot, SFT, &kp COMMA, &kp DOUBLE_QUOTES)
 
 // tap: dot | shift + tap: single quotes
-SIMPLE_MORPH(dot_squot, SFT, &kp DOT, &kp SINGLE_QUOTE)
+MAKE_SIMPLE_MORPH(dot_squot, SFT, &kp DOT, &kp SINGLE_QUOTE)
 
 // tap: plus | shift + tap: equal
-SIMPLE_MORPH(plus_equal, SFT, &kp PLUS, &kp EQUAL)
+MAKE_SIMPLE_MORPH(plus_equal, SFT, &kp PLUS, &kp EQUAL)
 
 // tap: ESC | shift + tap: tilde
-SIMPLE_MORPH(esc_tilde, SFT, &kp ESC, &kp TILDE)
+MAKE_SIMPLE_MORPH(esc_tilde, SFT, &kp ESC, &kp TILDE)
+
+// tap: DEL | shift + tap: caps word
+MAKE_SIMPLE_MORPH(del_caps, SFT, &kp DEL, &caps_word)
+
+// For mod tap
+#define MAKE_MOD_TAP(NAME, BINDING1, BINDING2) \
+    ZMK_HOLD_TAP(NAME, \
+        flavor = "hold-preferred"; \
+        tapping-term-ms = <200>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+MAKE_MOD_TAP(mod_esctil, &kp , &esc_tilde)
+MAKE_MOD_TAP(mod_delcaps, &kp, &del_caps)
 
 // double-tap to enter bootloader
 ZMK_TAP_DANCE(boot,
@@ -134,11 +141,6 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hmr_sc, &kp, &semi_colon, KEYS_L THUMBS)  
 
-ZMK_MOD_MORPH(shift_word,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <MOD_LSFT>;
-)
-
 ZMK_CONDITIONAL_LAYER(sys_condition, NUM NAV, SYS)
 
 
@@ -150,7 +152,7 @@ ZMK_LAYER(Qwerty,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_dquot   &dot_squot   &slash_qmark
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                           &mt LCTRL &esc_tilde &mt LGUI TAB  &spc_tab_num      &bs_del_nav &mt RSHFT ENTER &mt RALT &shift_word
+                            &mod_esctil LGUI 0 &mt LCTRL TAB &spc_tab_num       &bs_del_nav &mt RSHFT ENTER &mod_delcaps RALT 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
