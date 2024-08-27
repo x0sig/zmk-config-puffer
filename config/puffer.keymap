@@ -69,10 +69,10 @@ ZMK_COMBO(minus, &kp MINUS, LB3 LB2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(plus, &kp PLUS, LB2 LB1, DEF NUM, COMBO_TERM_SLOW)
 
 // copy and past
-ZMK_COMBO(copy, &kp LC(C), LM2 LB2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(paste, &kp LC(V), LM1 LB1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(copy, &kp LS(LC(C)), LM2 LT2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(paste, &kp LS(LC(V)), LM1 LT1, DEF NUM, COMBO_TERM_SLOW)
+// ZMK_COMBO(copy, &kp LC(C), LM2 LB2, DEF NUM, COMBO_TERM_SLOW)
+// ZMK_COMBO(paste, &kp LC(V), LM1 LB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(copy, &kp LC(C), LM2 LT2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(paste, &kp LC(V), LM1 LT1, DEF NUM, COMBO_TERM_SLOW)
 
 // ----------- KEYMAP -----------
 
@@ -82,9 +82,6 @@ ZMK_COMBO(paste, &kp LS(LC(V)), LM1 LT1, DEF NUM, COMBO_TERM_SLOW)
         mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
         bindings = <BINDING1>, <BINDING2>; \
     )
-
-// tap: backspace | ctrl + tap: delete | hold: nav layer
-MAKE_SIMPLE_MORPH(bs_del_nav, CTL, &lt NAV BSPC, &kp DEL)
 
 // tap: space | shift + tap: tab | hold: Num layer
 MAKE_SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
@@ -107,8 +104,8 @@ MAKE_SIMPLE_MORPH(plus_equal, SFT, &kp PLUS, &kp EQUAL)
 // tap: ESC | shift + tap: tilde
 MAKE_SIMPLE_MORPH(esc_tilde, SFT, &kp ESC, &kp TILDE)
 
-// tap: DEL | shift + tap: caps word
-MAKE_SIMPLE_MORPH(del_caps, SFT, &kp DEL, &caps_word)
+// tap: DEL | ctrl + tap: caps word
+MAKE_SIMPLE_MORPH(del_caps, CTL, &kp DEL, &caps_word)
 
 // For mod tap
 #define MAKE_MOD_TAP(NAME, BINDING1, BINDING2) \
@@ -152,7 +149,7 @@ ZMK_LAYER(Qwerty,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_dquot   &dot_squot   &slash_qmark
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                            &mod_esctil LGUI 0 &mt LCTRL TAB &spc_tab_num       &bs_del_nav &mt RSHFT ENTER &mod_delcaps RALT 0
+                            &mod_esctil LGUI 0 &mt LCTRL TAB &spc_tab_num      &lt NAV BSPC &mt RSHFT ENTER &mod_delcaps RALT 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
