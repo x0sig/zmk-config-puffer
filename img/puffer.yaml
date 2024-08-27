@@ -21,14 +21,12 @@ layers:
     - {t: ',', s: '"'}
     - {t: ., s: ''''}
     - {t: /, s: '?'}
-  - - '&mt LCTRL'
-    - {t: ESC, s: '~'}
-    - {t: TAB, h: LGUI}
+  - - {t: ESC, h: LGUI, s: '~'}
+    - {t: TAB, h: LCTRL}
     - {t: SPACE, h: Numpad, s: TAB}
     - {t: BSPC, h: Nav, s: DEL}
     - {t: ENTER, h: RSHFT}
-    - '&mt RALT'
-    - {t: LSHFT, h: sticky, s: '&caps_word'}
+    - {t: DEL, h: RALT, s: '&caps_word'}
   Numpad:
   - ['`', '~', '@', ^, +, '*', '7', '8', '9', '-']
   - - {t: $, h: LALT}
@@ -44,8 +42,8 @@ layers:
   - ['%', '!', <, '>', '#', '=', '1', '2', '3', \]
   - - (
     - )
-    - {t: ▽, type: trans}
     - {type: held}
+    - {t: ▽, type: trans}
     - '0'
     - {t: ▽, type: trans}
   Nav:
@@ -55,8 +53,8 @@ layers:
   - - ''
     - ''
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {type: held}
+    - ''
     - ''
   System:
   - [BOOT, '', '', '', '', BRI INC, F7, F8, F9, F12]
@@ -73,9 +71,9 @@ layers:
   - [BT CLR, '', '', '', '', '', F1, F2, F3, F10]
   - - ''
     - ''
-    - {t: ▽, type: trans}
     - {type: held}
     - {type: held}
+    - ''
     - ''
 combos:
 - p: [6, 7]
