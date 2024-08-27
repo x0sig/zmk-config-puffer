@@ -24,7 +24,7 @@ layers:
   - - {t: ESC, h: LGUI, s: '~'}
     - {t: TAB, h: LCTRL}
     - {t: SPACE, h: Numpad, s: TAB}
-    - {t: BSPC, h: Nav, s: DEL}
+    - {t: BSPC, h: Nav}
     - {t: ENTER, h: RSHFT}
     - {t: DEL, h: RALT, s: '&caps_word'}
   Numpad:
@@ -112,15 +112,9 @@ combos:
 - p: [22, 23]
   k: +
   l: [Qwerty, Numpad]
-- p: [12, 22]
+- p: [12, 2]
   k: Ctl+ C
   l: [Qwerty, Numpad]
-- p: [13, 23]
-  k: Ctl+ V
-  l: [Qwerty, Numpad]
-- p: [12, 2]
-  k: Sft+Ctl+ C
-  l: [Qwerty, Numpad]
 - p: [13, 3]
-  k: Sft+Ctl+ V
+  k: Ctl+ V
   l: [Qwerty, Numpad]
