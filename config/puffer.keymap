@@ -60,13 +60,13 @@ MAKE_SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
 MAKE_SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
 
 // tap: slash | shift + tap: question mark
-MAKE_SIMPLE_MORPH(slash_qmark, SFT, &kp SLASH, &kp QMARK)
+MAKE_SIMPLE_MORPH(slash_gt, SFT, &kp SLASH, &kp GT)
 
 // tap: comma | shift + tap: double quotes
-MAKE_SIMPLE_MORPH(comma_dquot, SFT, &kp COMMA, &kp DOUBLE_QUOTES)
+MAKE_SIMPLE_MORPH(comma_lt, SFT, &kp COMMA, &kp GT)
 
 // tap: dot | shift + tap: single quotes
-MAKE_SIMPLE_MORPH(dot_squot, SFT, &kp DOT, &kp SINGLE_QUOTE)
+MAKE_SIMPLE_MORPH(dot_squot, SFT, &kp DOT, &kp LT)
 
 // tap: plus | shift + tap: equal
 MAKE_SIMPLE_MORPH(plus_equal, SFT, &kp PLUS, &kp EQUAL)
@@ -117,7 +117,7 @@ ZMK_LAYER(Qwerty,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LALT A   &hml LGUI S  &hml LCTRL D   &hml LSHFT F     &kp G             &kp H     &hmr RSHFT J  &hmr RCTRL K   &hmr RGUI L   &hmr_sc RALT 0
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_dquot   &dot_squot   &slash_qmark
+        &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_dquot   &dot_lt   &slash_gt
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                             &mod_esctil LGUI 0 &mt LCTRL TAB &spc_tab_num      &lt NAV BSPC &mt RSHFT ENTER &mod_delcaps RALT 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -129,7 +129,7 @@ ZMK_LAYER(Numpad,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
   &hml LALT DLLR &hml LGUI AMPS &hml LCTRL EQUAL &hml LSHFT STAR &kp PIPE       &kp PLUS       &kp N4        &kp N5        &kp N6       &kp SLASH
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp PRCNT       &kp EXCL     &kp LT       &kp GT        &kp HASH          &kp EQUAL      &kp N1        &kp N2        &kp N3     &kp BACKSLASH
+      &kp PRCNT       &kp EXCL     &kp SINGLE_QUOTE       &kp DOUBLE_QUOTES        &kp HASH          &kp EQUAL      &kp N1        &kp N2        &kp N3     &kp BACKSLASH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                   &kp LPAR      &kp RPAR         ___               ___         &kp N0          ___
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
