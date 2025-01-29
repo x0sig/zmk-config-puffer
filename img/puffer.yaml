@@ -23,7 +23,7 @@ layers:
     - {t: /, s: '?'}
   - - TAB
     - SPACE
-    - {t: ESC, h: System}
+    - {t: ESC, h: Numpad}
     - {t: BSPC, h: Nav}
     - ENTER
     - DEL
@@ -42,7 +42,7 @@ layers:
   - ['%', '!', '''', '"', '#', '=', '1', '2', '3', \]
   - - (
     - )
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - '0'
     - {t: ▽, type: trans}
@@ -72,6 +72,6 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
