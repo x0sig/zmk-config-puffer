@@ -54,7 +54,7 @@
     )
 
 // tap: space | shift + tap: tab | hold: Num layer
-MAKE_SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
+//MAKE_SIMPLE_MORPH(spc_tab_num, SFT, &lt NUM SPACE, &kp TAB)
 
 // tap: semicolon | shift + tap: colon
 MAKE_SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
@@ -75,7 +75,7 @@ MAKE_SIMPLE_MORPH(plus_equal, SFT, &kp PLUS, &kp EQUAL)
 MAKE_SIMPLE_MORPH(esc_tilde, SFT, &kp ESC, &kp TILDE)
 
 // tap: DEL | ctrl + tap: caps word
-MAKE_SIMPLE_MORPH(del_caps, CTL, &kp DEL, &caps_word)
+//MAKE_SIMPLE_MORPH(del_caps, CTL, &kp DEL, &caps_word)
 
 // For mod tap
 #define MAKE_MOD_TAP(NAME, BINDING1, BINDING2) \
@@ -119,7 +119,7 @@ ZMK_LAYER(Qwerty,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_lt      &dot_gt      &slash_qmark
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &mod_esctil 0   &mt TAB      &spc_tab_num      &lt NAV BSPC   &mt ENTER   &mod_delcaps 0
+                                    &kp TAB     &kp SPACE    &lt SYS ESC      &lt NAV BSPC   &kp ENTER      &kp DEL
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
