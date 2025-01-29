@@ -40,16 +40,25 @@ layers:
     - '6'
     - /
   - ['%', '!', '''', '"', '#', '=', '1', '2', '3', \]
-  - - (
-    - )
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
     - '0'
     - {t: ▽, type: trans}
   Nav:
-  - ['', '', '', '', '', VOL UP, HOME, UP, END, PG UP]
-  - [LALT, LGUI, LCTRL, LSHFT, '', VOL DN, LEFT, DOWN, RIGHT, PG DN]
-  - ['', '', '', '', '', MUTE, PP, PREV, NEXT, '']
+  - ['', '', '', '', '', VOL UP, VOL DN, MUTE, END, PG UP]
+  - - {t: '[', h: LALT}
+    - {t: ']', h: LGUI}
+    - {t: KP LPAR, h: LCTRL}
+    - {t: KP RPAR, h: LSHFT}
+    - ''
+    - LEFT
+    - UP
+    - DOWN
+    - RIGHT
+    - PG DN
+  - ['', '', '{', '}', '', '', PP, PREV, NEXT, '']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
