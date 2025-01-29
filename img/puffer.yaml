@@ -113,8 +113,8 @@ combos:
   k: +
   l: [Qwerty, Numpad]
 - p: [12, 2]
-  k: Ctl+ C
+  k: Ctl+C
   l: [Qwerty, Numpad]
 - p: [13, 3]
-  k: Ctl+ V
+  k: Ctl+V
   l: [Qwerty, Numpad]
