@@ -43,36 +43,6 @@
 #define COMBO_TERM_FAST 25
 #define COMBO_TERM_SLOW 50
 
-// left and right brace { }
-ZMK_COMBO(lbrc, &kp LBRC, RT1 RT2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(rbrc, &kp RBRC, RT2 RT3, DEF NUM, COMBO_TERM_SLOW)
-
-// left and right parenthesis ( )
-ZMK_COMBO(lpar, &kp LPAR, RM1 RM2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(rpar, &kp RPAR, RM2 RM3, DEF NUM, COMBO_TERM_SLOW)
-
-// left and right bracket [ ]
-ZMK_COMBO(lbkt, &kp LBKT, RB1 RB2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(rbkt, &kp RBKT, RB2 RB3, DEF NUM, COMBO_TERM_SLOW)
-
-// left and right less-then and greater-then < >
-ZMK_COMBO(lt, &kp LT, LT3 LT2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(gt, &kp GT, LT2 LT1, DEF NUM, COMBO_TERM_SLOW)
-
-// left and right underscore and equal
-ZMK_COMBO(under, &kp UNDER, LM3 LM2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(equal, &kp EQUAL, LM2 LM1, DEF NUM, COMBO_TERM_SLOW)
-
-// left and right minus and plus
-ZMK_COMBO(minus, &kp MINUS, LB3 LB2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(plus, &kp PLUS, LB2 LB1, DEF NUM, COMBO_TERM_SLOW)
-
-// copy and past
-// ZMK_COMBO(copy, &kp LC(C), LM2 LB2, DEF NUM, COMBO_TERM_SLOW)
-// ZMK_COMBO(paste, &kp LC(V), LM1 LB1, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(copy, &kp LC(C), LM2 LT2, DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(paste, &kp LC(V), LM1 LT1, DEF NUM, COMBO_TERM_SLOW)
-
 // ----------- KEYMAP -----------
 
 // reuse basic mod-morph scheme
