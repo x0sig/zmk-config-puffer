@@ -18,9 +18,9 @@ layers:
     - B
     - N
     - M
-    - '&comma_dquot'
-    - '&dot_lt'
-    - {t: /, s: '>'}
+    - {t: ',', s: lt}
+    - {t: ., s: '>'}
+    - '&slash_gt'
   - - {t: ESC, h: LGUI, s: '~'}
     - {t: TAB, h: LCTRL}
     - {t: SPACE, h: Numpad, s: TAB}
