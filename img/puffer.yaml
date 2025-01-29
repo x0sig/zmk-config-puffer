@@ -21,12 +21,12 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - {t: /, s: '?'}
-  - - '&mod_esctil'
-    - '&mt TAB'
-    - {t: SPACE, h: Numpad, s: TAB}
+  - - TAB
+    - SPACE
+    - {t: ESC, h: System}
     - {t: BSPC, h: Nav}
-    - '&mt ENTER'
-    - '&mod_delcaps'
+    - ENTER
+    - DEL
   Numpad:
   - ['`', '~', '@', ^, +, '*', '7', '8', '9', '-']
   - - {t: $, h: LALT}
@@ -42,7 +42,7 @@ layers:
   - ['%', '!', '''', '"', '#', '=', '1', '2', '3', \]
   - - (
     - )
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '0'
     - {t: ▽, type: trans}
@@ -72,6 +72,6 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
