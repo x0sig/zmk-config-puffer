@@ -85,8 +85,8 @@ MAKE_SIMPLE_MORPH(esc_tilde, SFT, &kp ESC, &kp TILDE)
         bindings = <BINDING1>, <BINDING2>; \
     )
 
-MAKE_MOD_TAP(mod_esctil, &kp , &esc_tilde)
-MAKE_MOD_TAP(mod_delcaps, &kp, &del_caps)
+//MAKE_MOD_TAP(mod_esctil, &kp , &esc_tilde)
+//MAKE_MOD_TAP(mod_delcaps, &kp, &del_caps)
 
 // double-tap to enter bootloader
 ZMK_TAP_DANCE(boot,
