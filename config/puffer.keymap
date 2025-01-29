@@ -63,7 +63,7 @@ MAKE_SIMPLE_MORPH(semi_colon, SFT, &kp SEMI, &kp COLON)
 MAKE_SIMPLE_MORPH(slash_qmark, SFT, &kp SLASH, &kp QMARK)
 
 // tap: comma | shift + tap: double quotes
-MAKE_SIMPLE_MORPH(comma_lt, SFT, &kp COMMA, &kp lt)
+MAKE_SIMPLE_MORPH(comma_lt, SFT, &kp COMMA, &kp LT)
 
 // tap: dot | shift + tap: single quotes
 MAKE_SIMPLE_MORPH(dot_gt, SFT, &kp DOT, &kp GT)
@@ -117,7 +117,7 @@ ZMK_LAYER(Qwerty,
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &hml LALT A   &hml LGUI S  &hml LCTRL D   &hml LSHFT F     &kp G             &kp H     &hmr RSHFT J  &hmr RCTRL K   &hmr RGUI L   &hmr_sc RALT 0
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_lt   &dot_gt   &slash_gt
+        &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &comma_lt      &dot_gt      &slash_qmark
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                             &mod_esctil LGUI 0 &mt LCTRL TAB &spc_tab_num      &lt NAV BSPC &mt RSHFT ENTER &mod_delcaps RALT 0
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
