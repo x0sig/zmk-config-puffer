@@ -11,16 +11,7 @@ layers:
     - {t: K, h: RCTRL}
     - {t: L, h: RGUI}
     - {t: ;, h: RALT, s: ':'}
-  - - Z
-    - X
-    - C
-    - V
-    - B
-    - N
-    - M
-    - {t: ',', s: <}
-    - {t: ., s: '>'}
-    - {t: /, s: '?'}
+  - [Z, X, C, V, B, N, M, ',', ., /]
   - - {t: ESC, h: LGUI, s: '~'}
     - {t: TAB, h: LCTRL}
     - {t: SPACE, h: Numpad, s: TAB}
