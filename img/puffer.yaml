@@ -50,12 +50,12 @@ layers:
   - ['', '', '', '', '', VOL UP, VOL DN, MUTE, END, PG UP]
   - - {t: '[', h: LALT}
     - {t: ']', h: LGUI}
-    - {t: KP LPAR, h: LCTRL}
-    - {t: KP RPAR, h: LSHFT}
+    - {t: (, h: LCTRL}
+    - {t: ), h: LSHFT}
     - ''
     - LEFT
-    - UP
     - DOWN
+    - UP
     - RIGHT
     - PG DN
   - ['', '', '{', '}', '', '', PP, PREV, NEXT, '']
